@@ -3,6 +3,7 @@ package models;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
@@ -37,21 +38,41 @@ public class User implements WritableComparable<User> {
     public IntWritable getUserId() {
         return userId;
     }
+   
+    public void setUserId(IntWritable id) {
+        this.userId = id;
+    }
 
     public Text getUserName() {
         return userName;
+    }
+   
+    public void setUserName(Text userName) {
+        this.userName = userName;
     }
 
     public Text getFirstPost() {
         return firstPost;
     }
+   
+    public void setFirstPost(Text firstPost) {
+        this.firstPost = firstPost;
+    }
 
     public Text getLastPost() {
         return lastPost;
     }
+   
+    public void setLastPost(Text lastPost) {
+        this.lastPost = lastPost;
+    }
 
     public Text getCreationDate() {
         return creationDate;
+    }
+   
+    public void setCreationDate(Text creationDate) {
+        this.creationDate = creationDate;
     }
 
     @Override
